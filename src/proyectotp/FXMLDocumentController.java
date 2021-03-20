@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -26,6 +27,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private ComboBox<String> combo_Empleado;
+    
+    //@FXML 
+    //private TextField<String> nombre_Empleado, salario_Empleado;
 
     
     @FXML
