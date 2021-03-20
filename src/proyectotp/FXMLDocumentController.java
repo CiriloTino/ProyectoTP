@@ -6,10 +6,13 @@
 package proyectotp;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 /**
@@ -20,16 +23,30 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+
+    @FXML
+    private ComboBox<String> combo_Empleado;
+
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hola!");
+    private void comboboxEvent(ActionEvent event) {
+        
     }
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event)
+    {
+    
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        ArrayList <String> empleados = new ArrayList<>();
+        Collections.addAll(empleados,new String[]{"Gerente","Coordinador","Empleado general"});
+        combo_Empleado.getItems().addAll(empleados);
+
     }    
     
 }
