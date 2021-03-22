@@ -10,6 +10,7 @@ public  class empleado implements impuestos{
     protected int diasLaborados;
     protected double sueldo;
     protected double sueldoDiario;
+    protected double salario_bruto;
     protected double prestaciones;
     protected final double impuestos = 0.10;
     protected final double seguroSocial = 0.05;
@@ -81,7 +82,7 @@ public  class empleado implements impuestos{
     }
 
     protected void setDiasLaborados(int diasLaborados) {
-        if(diasLaborados > 10 && diasLaborados < 15)
+        if(diasLaborados > 9 && diasLaborados < 16)
             this.diasLaborados = diasLaborados;
         else
             System.out.println("Los días laborados estan fuera de rango, ingrese nuevamente, "
@@ -121,7 +122,6 @@ public  class empleado implements impuestos{
         deducciones = ;
         System.out.println();*/
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
     }
     
     //Implementamos el metodo sueldoBruto de la interface
@@ -132,6 +132,11 @@ public  class empleado implements impuestos{
         System.out.println(diasTrabajados * sueldoDiario);
     }
     
+
+    
+    
+    
+    
     //Implementamos el metodo descuentos de la interface
     @Override
     public void descuentos(double impuestos, double seguroSocial) {
@@ -140,6 +145,29 @@ public  class empleado implements impuestos{
     
     
     
+    
+    
+    /**********************************************/
+    /*
+    private void setSalario_Bruto()
+    {
+        this.salario_bruto = this.getDias_laborados() * this.getSalario_dia();
+    }
+    
+    private void setImpuestos(double impuesto)
+    {
+        this.impuestos = this.getSalario_bruto() * impuesto;
+    }
+    
+    private void setSeguro(double seguro)
+    {
+        this.seguro = this.getSalario_bruto()*seguro;
+    }
+    
+    protected void setSalario_Neto()
+    {
+        this.salario_neto = this.getSalario_bruto() + this.getPrestaciones() - this.getImpuestos() - this.getSeguro();
+    }*/
     
     
     
